@@ -2,7 +2,7 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# Digital lock and key system 🎯
+# Digital lost and found system 🎯
 
 ## Basic Details
 
