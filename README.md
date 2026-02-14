@@ -2,14 +2,14 @@
   <img src="./img.png" alt="Project Banner" width="100%">
 </p>
 
-# [Project Name] 🎯
+# Digital lock and key system 🎯
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name: Byte Coders
 
 ### Team Members
-- Member 1: [Name] - [College]
+- Member 1: Pavithra S - government engineering college,Thrissur
 - Member 2: [Name] - [College]
 
 ### Hosted Project Link
