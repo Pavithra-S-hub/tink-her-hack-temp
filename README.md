@@ -36,16 +36,9 @@ The proposed Digital Lost & Found System provides a centralized web platform whe
 - Libraries used: [e.g., axios, pandas, JUnit]
 - Tools used: VS Code
 
-**For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
-
----
 
 ## Features
 
-List the key features of your project:
 Feature 1: Post Lost/Found Items
 Users can report lost or found items by submitting item details such as name, category, campus location, and description.
 
@@ -56,12 +49,10 @@ Feature 3: Claim Requests
 Users can submit claim requests with contact details and proof of ownership for verification.
 
 Feature 4: View Claim Requests
-All submitted claims can be viewed in one place to track claimed items and their status.
----
+
 
 ## Implementation
 
-### For Software:
 
 #### Installation
 # Clone repository
@@ -93,21 +84,10 @@ cd client
 npm start
 
 
-### For Hardware:
-
-Not applicable
-
-#### Circuit Setup
-Not applicable
-
----
-
 ## Project Documentation
 
-### For Software:
 
-#### Screenshots (Add at least 3)
-
+#### Screenshots
 <img width="1888" height="962" alt="image" src="https://github.com/user-attachments/assets/bbf96527-12bc-47a7-a95a-3935ee3dbfe7" />
 Screenshot 1 - login page
 The email and password fields through which the user can login.
@@ -136,6 +116,7 @@ Database: Firebase Firestore stores items and claims data.
 
 Data flows from React → API → Firebase → Response back to UI.
 
+
 **Application Workflow:**
 
 User logs into the system.
@@ -146,18 +127,7 @@ Submits claim request with proof.
 
 Claims are stored in database.
 
-Claims can be viewed and managed.
----
 
-### For Hardware:
-
-#### Schematic & Circuit
-
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
 
 #### Build Photos
 
