@@ -46,11 +46,17 @@ The proposed Digital Lost & Found System provides a centralized web platform whe
 ## Features
 
 List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+Feature 1: Post Lost/Found Items
+Users can report lost or found items by submitting item details such as name, category, campus location, and description.
 
+Feature 2: Browse Items
+Users can view all posted items and filter/search based on type, category, or campus.
+
+Feature 3: Claim Requests
+Users can submit claim requests with contact details and proof of ownership for verification.
+
+Feature 4: View Claim Requests
+All submitted claims can be viewed in one place to track claimed items and their status.
 ---
 
 ## Implementation
@@ -58,22 +64,41 @@ List the key features of your project:
 ### For Software:
 
 #### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+# Clone repository
+git clone https://github.com/your-repo/lost-and-found.git
+
+# Move to client
+cd client
+
+# Install frontend dependencies
+npm install
+
+# Install axios
+npm install axios
+
+# Move to server
+cd ../server
+
+# Install backend dependencies
+npm install
+
 
 #### Run
-```bash
-[Run commands - e.g., npm start, python app.py]
-```
+# Run backend
+cd server
+node index.js
+
+# Run frontend
+cd client
+npm start
+
 
 ### For Hardware:
 
-#### Components Required
-[List all components needed with specifications]
+Not applicable
 
 #### Circuit Setup
-[Explain how to set up the circuit]
+Not applicable
 
 ---
 
@@ -83,27 +108,45 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1888" height="962" alt="image" src="https://github.com/user-attachments/assets/bbf96527-12bc-47a7-a95a-3935ee3dbfe7" />
+Screenshot 1 - login page
+The email and password fields through which the user can login.
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1882" height="955" alt="image" src="https://github.com/user-attachments/assets/3fc33cce-8fb0-46c7-a6c1-2553ffc500c2" />
+screenshot 2 - dashboard
+After clicking on login , it takes the user to the dashboard where the user has three options which are :- post items,view requests, browse items
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1908" height="957" alt="image" src="https://github.com/user-attachments/assets/d00578fb-ef87-4c94-a92b-0e966829c4e0" />
+screenshot 3 - post items page
+After clicking on post items on dashboard it takes the user to this page where the user can fill in the details of the item.
+
+
 
 #### Diagrams
 
 **System Architecture:**
 
-![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+The system follows a 3-tier architecture:
+
+Frontend: React.js handles UI and user interactions.
+
+Backend: Node.js + Express.js manages APIs and business logic.
+
+Database: Firebase Firestore stores items and claims data.
+
+Data flows from React → API → Firebase → Response back to UI.
 
 **Application Workflow:**
 
-![Workflow](docs/workflow.png)
-*Add caption explaining your workflow*
+User logs into the system.
 
+Posts or browses lost/found items.
+
+Submits claim request with proof.
+
+Claims are stored in database.
+
+Claims can be viewed and managed.
 ---
 
 ### For Hardware:
@@ -372,39 +415,42 @@ python script.py -v --format json data.json
 
 ## AI Tools Used (Optional - For Transparency Bonus)
 
-If you used AI tools during development, document them here for transparency:
-
+Chatgpt
 **Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
 
 **Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+- Generated React components
+
+Debugged API integration
+
+Assisted with Firebase setup
+
+Helped structure documentation
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+- “Create claim request API in Node.js”
 
+“Fix React axios POST error”
+
+“Design lost and found dashboard UI”
 **Percentage of AI-generated code:** [Approximately X%]
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
+-Project idea & planning
 
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
+UI design decisions
 
----
+Database structure
+
+Integration & testing
+
+
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
-
----
+- [Pavithra S]: [Frontend + Backend + Integration]
+- [Sreelekshmi Harikumar]: [Frontend + Database + Documentation + Integration]
+-
 
 ## License
 
