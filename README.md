@@ -10,19 +10,19 @@
 
 ### Team Members
 - Member 1: Pavithra S - government engineering college,Thrissur
-- Member 2: [Name] - [College]
+- Member 2: Sreelekshmi - government engineering college,Thrissur
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+The Digital Lost & Found System is a web application that helps users report and locate lost or found items within a campus. Users can post item details, browse listings, and submit claim requests with proof of ownership. The system streamlines item recovery by connecting finders and rightful owners efficiently.
 
 ### The Problem statement
-[What problem are you solving?]
+In campuses and public spaces, lost items are often difficult to recover due to the lack of a centralized reporting system. People rely on word-of-mouth or scattered notices, which leads to delays and permanent loss of belongings. A digital platform is needed to systematically report, track, and claim lost and found items efficiently.
 
 ### The Solution
-[How are you solving it?]
+The proposed Digital Lost & Found System provides a centralized web platform where users can post details of lost or found items. It allows others to browse listings and submit claim requests with proof of ownership. This streamlines communication between finders and owners, improving the chances of successful item recovery.
 
 ---
 
@@ -31,10 +31,10 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
+- Languages used: JavaScript, HTML, CSS
+- Frameworks used:React.js,Node.js, Express.js
 - Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+- Tools used: VS Code
 
 **For Hardware:**
 - Main components: [List main components]
