@@ -3,55 +3,43 @@ const router = express.Router();
 const db = require("../config/firebase");
 
 
-// ➜ ADD ITEM
+// ADD ITEM
 router.post("/add", async (req, res) => {
   try {
-    console.log("BODY RECEIVED:", req.body);
-
-    if (!req.body.title) {
-      return res.status(400).json({
-        message: "Title missing",
-      });
-    }
-
-    const newItem = {
-      title: req.body.title,
-      category: req.body.category,
-      campus: req.body.campus,
-      description: req.body.description,
-      type: req.body.type,
+    const item = {
+      ...req.body,
       status: "Open",
-      createdAt: new Date(),
+      createdAt: new Date()
     };
 
     const docRef = await db
       .collection("items")
-      .add(newItem);
+      .add(item);
 
     res.json({
       message: "Item added",
-      id: docRef.id,
+      id: docRef.id
     });
 
   } catch (error) {
-    console.error("FIREBASE ERROR:", error);
-
+    console.error(error);
     res.status(500).json({
-      message: "Firestore failed",
-      error: error.message,
+      message: "Error adding item"
     });
   }
 });
 
 
-// ➜ GET ALL ITEMS
+// GET ALL ITEMS
 router.get("/all", async (req, res) => {
   try {
-    const snapshot = await db.collection("items").get();
+    const snapshot = await db
+      .collection("items")
+      .get();
 
     const items = snapshot.docs.map(doc => ({
       id: doc.id,
-      ...doc.data(),
+      ...doc.data()
     }));
 
     res.json(items);
@@ -59,7 +47,7 @@ router.get("/all", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      message: "Fetch failed",
+      message: "Error fetching items"
     });
   }
 });

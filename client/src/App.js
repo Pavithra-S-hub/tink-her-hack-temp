@@ -1,34 +1,32 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import BrowseItems from "./pages/BrowseItems";
-import ClaimItem from "./pages/ClaimItem";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
 import PostItem from "./pages/PostItem";
+import ClaimItem from "./pages/ClaimItem";
+import ViewClaims from "./pages/ViewClaims";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
 
-        {/* Default → Login */}
         <Route path="/" element={<Login />} />
-
-        {/* Auth */}
-        <Route path="/register" element={<Register />} />
-
-        {/* Dashboard */}
         <Route path="/dashboard" element={<Dashboard />} />
-
-        {/* Features */}
         <Route path="/browse" element={<BrowseItems />} />
-        <Route path="/claim" element={<ClaimItem />} />
         <Route path="/post" element={<PostItem />} />
+        <Route path="/claim" element={<ClaimItem />} />
+
+        {/* VIEW CLAIMS ROUTE */}
+        <Route
+          path="/view-claims"
+          element={<ViewClaims />}
+        />
 
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 

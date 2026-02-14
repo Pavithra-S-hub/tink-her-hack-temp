@@ -3,20 +3,13 @@ const router = express.Router();
 const db = require("../config/firebase");
 
 
-// 🔹 TEST ROUTE
-router.get("/test", (req, res) => {
-  res.send("Claim route working ✅");
-});
-
-
-// 🔹 ADD CLAIM
+// ADD CLAIM
 router.post("/add", async (req, res) => {
   try {
-    console.log("Incoming claim:", req.body);
-
     const claimData = {
       ...req.body,
-      createdAt: new Date(),
+      status: "Pending",
+      createdAt: new Date()
     };
 
     const docRef = await db
@@ -24,20 +17,20 @@ router.post("/add", async (req, res) => {
       .add(claimData);
 
     res.json({
-      message: "Claim stored successfully",
-      id: docRef.id,
+      message: "Claim stored",
+      id: docRef.id
     });
 
   } catch (error) {
-    console.error("Error storing claim:", error);
+    console.error(error);
     res.status(500).json({
-      message: "Failed to store claim",
+      message: "Error storing claim"
     });
   }
 });
 
 
-// 🔹 GET ALL CLAIMS
+// GET ALL CLAIMS
 router.get("/all", async (req, res) => {
   try {
     const snapshot = await db
@@ -46,7 +39,7 @@ router.get("/all", async (req, res) => {
 
     const claims = snapshot.docs.map(doc => ({
       id: doc.id,
-      ...doc.data(),
+      ...doc.data()
     }));
 
     res.json(claims);
@@ -54,10 +47,9 @@ router.get("/all", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({
-      message: "Failed to fetch claims",
+      message: "Error fetching claims"
     });
   }
 });
-
 
 module.exports = router;

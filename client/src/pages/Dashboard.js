@@ -30,12 +30,13 @@ function Dashboard() {
 
         {/* Claims */}
         <div
-          style={styles.card}
-          onClick={() => navigate("/claims")}
-        >
-          <h2>📄 Claim Requests</h2>
-          <p>View & manage claims</p>
-        </div>
+  style={styles.card}
+  onClick={() => navigate("/view-claims")}
+>
+  <h2>📄 View Requests</h2>
+  <p>View all claimed items</p>
+</div>
+
 
       </div>
     </div>
